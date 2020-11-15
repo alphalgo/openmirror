@@ -2,6 +2,8 @@ package openmirror
 
 import (
 	"testing"
+
+	a "github.com/i0Ek3/asrt"
 )
 
 func TestParing(t *testing.T) {
@@ -12,7 +14,5 @@ func TestParing(t *testing.T) {
 }
 
 func assertParing(t *testing.T, got, want error) {
-	if got != want {
-		t.Errorf("got %q want %q", got, want)
-	}
+	a.Asrt(t, got, want)
 }
